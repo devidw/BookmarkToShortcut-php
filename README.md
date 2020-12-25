@@ -6,9 +6,9 @@ Convert your browser bookmarks to .url files to be able to use them on your  des
 
 1. download `Bookmarks2urlFiles.class.php`
 2. export bookmarks from browsers bookmark manager
-  - [opera://bookmarks](opera://bookmarks)
-  - [chrome://bookmarks](chrome://bookmarks)
-  - [edge://favorites/](edge://favorites)
+    - [opera://bookmarks](opera://bookmarks)
+    - [chrome://bookmarks](chrome://bookmarks)
+    - [edge://favorites/](edge://favorites)
 3. convert bookmarks with the following snippment or see `/test/usage.php`
 
 ```
