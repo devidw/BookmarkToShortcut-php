@@ -1,10 +1,11 @@
 <?php
 define('DS', DIRECTORY_SEPARATOR);
-require_once '..'.DS.'Bookmarks2urlFiles.class.php';
+require_once '..'.DS.'Bookmark2Shortcut.class.php';
 
-$converter = new Bookmarks2urlFiles(
-  __DIR__.DS.'in', // input directory
-  __DIR__.DS.'out' // output destination
+$converter = new Bookmark2Shortcut(
+  __DIR__.DS.'in', // source
+  __DIR__.DS.'out', // destination
+  ['url', 'webloc', 'desktop'] // formats to write
 );
 
 $converter->convert();
