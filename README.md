@@ -27,4 +27,4 @@ Convert your browser bookmarks to .url files to be able to use them on your  des
 
 ## Compatibility
 - works with `NETSCAPE-Bookmark-file-1` exports
-- tested in Chromium browsers (Opera, Chrome, Edge)
+- tested in Chromium browsers (Opera, Chrome, Edge), see `/test/in` and `/test/out`
