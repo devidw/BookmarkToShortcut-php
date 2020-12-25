@@ -10,6 +10,7 @@ Convert your browser bookmarks to .url files to be able to use them on your  des
   - [chrome://bookmarks](chrome://bookmarks)
   - [edge://favorites/](edge://favorites)
 3. convert bookmarks with the following snippment or see `/test/usage.php`
+
 ```
   // require downloaded class
   require 'Bookmarks2urlFiles.class.php';
