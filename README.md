@@ -4,7 +4,7 @@ Convert your browser bookmarks to web shortcut files (`.url`, `.webloc`, `.deskt
 
 ## How to convert
 
-1. download `Bookmark2Shortcut.class.php`
+1. download `BookmarkToShortcut.class.php`
 2. export bookmarks from browsers bookmark manager
     - [opera://bookmarks](opera://bookmarks)
     - [chrome://bookmarks](chrome://bookmarks)
@@ -13,10 +13,10 @@ Convert your browser bookmarks to web shortcut files (`.url`, `.webloc`, `.deskt
 
 ```php
   // require downloaded class
-  require 'Bookmark2Shortcut.class.php';
+  require 'BookmarkToShortcut.class.php';
 
   // create new class instance
-  $converter = new Bookmark2Shortcut(
+  $converter = new BookmarkToShortcut(
     'in', // source directory
     'out' // destination directory
     ['url', 'webloc', 'desktop'] // generate files in these formats

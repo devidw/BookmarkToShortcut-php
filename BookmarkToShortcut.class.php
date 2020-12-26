@@ -1,11 +1,11 @@
 <?php
 
 /**
- * Bookmark2Shortcut
+ * BookmarkToShortcut
  *
  * @author David Wolf
  */
-class Bookmark2Shortcut
+class BookmarkToShortcut
 {
 
   public $inDir;
