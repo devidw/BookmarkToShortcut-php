@@ -3,14 +3,13 @@
 /**
  * BookmarkToShortcut
  *
+ * PHP version 8
+ *
  * @author David Wolf
  */
 class BookmarkToShortcut
 {
 
-  public $inDir;
-  public $outDir;
-  public $formats;
   public $supportedFormats;
 
   /**
@@ -19,9 +18,9 @@ class BookmarkToShortcut
    * @param array $formats
    */
   function __construct(
-    string $inDir,
-    string $outDir,
-    array $formats
+    public string $inDir,
+    public string $outDir,
+    public array $formats
   ) {
     // file paths
     foreach ([$inDir, $outDir] as $dir) {
@@ -70,7 +69,8 @@ class BookmarkToShortcut
   private function parse(string $file): array
   {
     $out = [];
-    $dom = DOMDocument::loadHTMLFile($file);
+    $dom = new DOMDocument();
+    $dom->loadHTMLFile($file);
     $anchors = $dom->getElementsByTagName('a');
     // print_r($a);
     foreach ($anchors as $a) {
