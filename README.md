@@ -15,8 +15,8 @@ Download `/python/BookmarkToShortcut.py`
   from BookmarkToShortcut import BookmarkToShortcut
 
   converter = BookmarkToShortcut(
-      './in', # input directory
-      './out', # output directory
+      'in', # input directory
+      'out', # output directory
       {'url', 'desktop', 'webloc'} # formats to write
   )
 
@@ -30,8 +30,8 @@ Download `/php/BookmarkToShortcut.php`
 require_once 'BookmarkToShortcut.php';
 
 $converter = new BookmarkToShortcut(
-  './in', // input directory
-  './out', // output directory
+  'in', // input directory
+  'out', // output directory
   ['url', 'webloc', 'desktop'] // formats to write
 );
 
