@@ -91,9 +91,25 @@ class BookmarkToShortcut
     [InternetShortcut]
     URL=$url
     FILE;
-    // IconFile=$url/favicon.ico
-    // IconIndex=1
   }
+
+  /**
+   * generate .desktop file contents
+   * @param string $name
+   * @param string $url
+   * @return string
+   */
+   private function desktopContents(string $name, string $url): string
+   {
+     return <<<FILE
+     [Desktop Entry]
+     Encoding=UTF-8
+     Icon=text-html
+     Type=Link
+     Name=$name
+     URL=$url
+     FILE;
+   }
 
  /**
   * generate .webloc file contents
@@ -112,24 +128,6 @@ class BookmarkToShortcut
       </dict>
     </plist>
     XML;
-  }
-
- /**
-  * generate .desktop file contents
-  * @param string $name
-  * @param string $url
-  * @return string
-  */
-  private function desktopContents(string $name, string $url): string
-  {
-    return <<<FILE
-    [Desktop Entry]
-    Encoding=UTF-8
-    Icon=text-html
-    Type=Link
-    Name=$name
-    URL=$url
-    FILE;
   }
 
   /**

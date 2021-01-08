@@ -3,33 +3,45 @@
 Convert your browser bookmarks to web shortcut files (`.url`, `.webloc`, `.desktop`) to be able to use them on your desktop and in your file explorer.
 
 ## How to convert
+First you have to export your bookmarks from your browsers, use the following links to navigate directly to your browsers bookmark manager.
+  - [opera://bookmarks](opera://bookmarks)
+  - [chrome://bookmarks](chrome://bookmarks)
+  - [edge://favorites](edge://favorites)
 
-1. download `BookmarkToShortcut.class.php`
-2. export bookmarks from browsers bookmark manager
-    - [opera://bookmarks](opera://bookmarks)
-    - [chrome://bookmarks](chrome://bookmarks)
-    - [edge://favorites](edge://favorites)
-3. convert bookmarks with the following snippet or see `/test/usage.php`
+### Using Python
+Download `/python/BookmarkToShortcut.py`
+
+```python
+  from BookmarkToShortcut import BookmarkToShortcut
+
+  converter = BookmarkToShortcut(
+      './in', # input directory
+      './out', # output directory
+      {'url', 'desktop', 'webloc'} # formats to write
+  )
+
+  converter.convert()
+```
+
+### Using PHP
+Download `/python/BookmarkToShortcut.py`
 
 ```php
-  // require downloaded class
-  require 'BookmarkToShortcut.class.php';
+require_once 'BookmarkToShortcut.php';
 
-  // create new class instance
-  $converter = new BookmarkToShortcut(
-    'in', // source directory
-    'out' // destination directory
-    ['url', 'webloc', 'desktop'] // generate files in these formats
-  );
+$converter = new BookmarkToShortcut(
+  './in', // input directory
+  './out', // output directory
+  ['url', 'webloc', 'desktop'] // formats to write
+);
 
-  // call convert method
-  $converter->convert();
+$converter->convert();
 ```
 
 ## Compatibility
 - works with `NETSCAPE-Bookmark-file-1` exports
-- tested for exports from Chromium browsers (Opera, Chrome, Edge), see `/test/in`
-- supported shortcut formats, see `/test/out`
+- tested for exports from Chromium browsers (Opera, Chrome, Edge)
+- supported shortcut formats
     - `.url` (Windows)
     - `.webloc` (Mac OSX)
     - `.desktop` (Linux)
