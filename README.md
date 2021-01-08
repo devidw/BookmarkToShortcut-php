@@ -24,7 +24,7 @@ Download `/python/BookmarkToShortcut.py`
 ```
 
 ### Using PHP
-Download `/python/BookmarkToShortcut.py`
+Download `/php/BookmarkToShortcut.php`
 
 ```php
 require_once 'BookmarkToShortcut.php';
