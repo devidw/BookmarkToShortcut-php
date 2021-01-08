@@ -27,7 +27,7 @@ Download `/python/BookmarkToShortcut.py`
 Download `/php/BookmarkToShortcut.php`
 
 ```php
-require_once 'BookmarkToShortcut.php';
+require 'BookmarkToShortcut.php';
 
 $converter = new BookmarkToShortcut(
   'in', // input directory
