@@ -1,15 +1,16 @@
-# Bookmark to Shortcut
+= Bookmark to Shortcut
 
 Convert your browser bookmarks to web shortcut files (`.url`, `.webloc`, `.desktop`) to be able to use them on your desktop and in your file explorer.
 
-## How to convert
+== How to convert
 First you have to export your bookmarks from your browsers, use the following links to navigate directly to your browsers bookmark manager.
-  - [opera://bookmarks](opera://bookmarks)
-  - [chrome://bookmarks](chrome://bookmarks)
-  - [edge://favorites](edge://favorites)
 
-### Using Python
-Download `/python/BookmarkToShortcut.py`
+* link:opera://bookmarks[opera://bookmarks]
+* link:chrome://bookmarks[chrome://bookmarks]
+* link:edge://favorites[edge://favorites]
+
+=== Using Python
+Clone `/python/BookmarkToShortcut.py`
 
 ```python
   from BookmarkToShortcut import BookmarkToShortcut
@@ -23,8 +24,8 @@ Download `/python/BookmarkToShortcut.py`
   converter.convert()
 ```
 
-### Using PHP
-Download `/php/BookmarkToShortcut.php`
+=== Using PHP
+Clone `/php/BookmarkToShortcut.php`
 
 ```php
 require 'BookmarkToShortcut.php';
@@ -38,10 +39,10 @@ $converter = new BookmarkToShortcut(
 $converter->convert();
 ```
 
-## Compatibility
-- works with `NETSCAPE-Bookmark-file-1` exports
-- tested for exports from Chromium browsers (Opera, Chrome, Edge)
-- supported shortcut formats
-    - `.url` (Windows)
-    - `.webloc` (Mac OSX)
-    - `.desktop` (Linux)
+== Compatibility
+* works with `NETSCAPE-Bookmark-file-1` exports
+* tested for exports from Chromium browsers (Opera, Chrome, Edge)
+* supported shortcut formats
+** `.url` (Windows)
+** `.webloc` (Mac OSX)
+** `.desktop` (Linux)
