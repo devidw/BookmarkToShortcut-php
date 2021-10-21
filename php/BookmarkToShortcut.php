@@ -3,13 +3,19 @@
 /**
  * BookmarkToShortcut
  *
- * PHP version 8
+ * PHP Version 8
  *
- * @author David Wolf
+ * @author David Wolf <david@wolf.gdn>
  */
 class BookmarkToShortcut
 {
 
+  /**
+   * Supported shortcut formats
+   * Values are the format file extensions
+   *
+   * @var array
+   */
   public $supportedFormats;
 
   /**
