@@ -9,25 +9,11 @@ First you have to export your bookmarks from your browsers, use the following li
 * link:chrome://bookmarks[chrome://bookmarks]
 * link:edge://favorites[edge://favorites]
 
-=== Using Python
-Clone `/python/BookmarkToShortcut.py`
+=== Usage
+Clone `/src/BookmarkToShortcut.php`
 
-```python
-  from BookmarkToShortcut import BookmarkToShortcut
-
-  converter = BookmarkToShortcut(
-      'in', # input directory
-      'out', # output directory
-      {'url', 'desktop', 'webloc'} # formats to write
-  )
-
-  converter.convert()
-```
-
-=== Using PHP
-Clone `/php/BookmarkToShortcut.php`
-
-```php
+[source, php]
+----
 require 'BookmarkToShortcut.php';
 
 $converter = new BookmarkToShortcut(
@@ -37,7 +23,7 @@ $converter = new BookmarkToShortcut(
 );
 
 $converter->convert();
-```
+----
 
 == Compatibility
 * works with `NETSCAPE-Bookmark-file-1` exports
