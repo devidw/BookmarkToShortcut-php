@@ -1,4 +1,13 @@
 = Bookmark to Shortcut
+ifdef::env-github[]
+:tip-caption: :bulb:
+:note-caption: :information_source:
+:important-caption: :heavy_exclamation_mark:
+:caution-caption: :fire:
+:warning-caption: :warning:
+endif::[]
+
+WARNING: This approve using PHP is deprecated and no longer maintained, please have a look into the https://github.com/devidw/BookmarkToShortcut-python[Python version] instead.
 
 Convert your browser bookmarks to web shortcut files (`.url`, `.webloc`, `.desktop`) to be able to use them on your desktop and in your file explorer.
 
