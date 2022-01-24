@@ -7,8 +7,6 @@ ifdef::env-github[]
 :warning-caption: :warning:
 endif::[]
 
-WARNING: This approve using PHP is deprecated and no longer maintained, please have a look into the https://github.com/devidw/BookmarkToShortcut-python[Python version] instead.
-
 Convert your browser bookmarks to web shortcut files (`.url`, `.webloc`, `.desktop`) to be able to use them on your desktop and in your file explorer.
 
 == How to convert
@@ -19,9 +17,7 @@ First you have to export your bookmarks from your browsers, use the following li
 * link:edge://favorites[edge://favorites]
 
 === Usage
-Clone `/src/BookmarkToShortcut.php`
-
-[source, php]
+[source,php]
 ----
 require 'BookmarkToShortcut.php';
 

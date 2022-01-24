@@ -1,9 +1,9 @@
 <?php
 
+namespace Devidw\BookmarkToShortcut;
+
 /**
  * BookmarkToShortcut
- *
- * PHP Version 8
  *
  * @author David Wolf <david@wolf.gdn>
  */
@@ -48,13 +48,14 @@ class BookmarkToShortcut
   }
 
   /**
-   * get array of files inside input directory
+   * Get array of files inside input directory
+   * 
    * @return array
    */
   private function getInFiles(): array
   {
     $htmlFiles = glob(
-      $this->inDir.DIRECTORY_SEPARATOR.'*.{html, htm}',
+      $this->inDir . DIRECTORY_SEPARATOR . '*.{html, htm}',
       GLOB_BRACE
     );
 
@@ -68,14 +69,15 @@ class BookmarkToShortcut
   }
 
   /**
-   * parse bookmarks file to get all bookmarks
+   * Parse bookmarks file to get all bookmarks
+   * 
    * @param string $file
    * @return array
    */
   private function parse(string $file): array
   {
     $out = [];
-    $dom = new DOMDocument();
+    $dom = new \DOMDocument();
     $dom->loadHTMLFile($file);
     $anchors = $dom->getElementsByTagName('a');
     // print_r($a);
@@ -86,11 +88,12 @@ class BookmarkToShortcut
     return $out;
   }
 
- /**
-  * generate .url file contents
-  * @param string $url
-  * @return string
-  */
+  /**
+   * Generate .url file contents
+
+   * @param string $url
+   * @return string
+   */
   private function urlContents(string $url): string
   {
     return <<<FILE
@@ -100,14 +103,15 @@ class BookmarkToShortcut
   }
 
   /**
-   * generate .desktop file contents
+   * Generate .desktop file contents
+   * 
    * @param string $name
    * @param string $url
    * @return string
    */
-   private function desktopContents(string $name, string $url): string
-   {
-     return <<<FILE
+  private function desktopContents(string $name, string $url): string
+  {
+    return <<<FILE
      [Desktop Entry]
      Encoding=UTF-8
      Icon=text-html
@@ -115,13 +119,14 @@ class BookmarkToShortcut
      Name=$name
      URL=$url
      FILE;
-   }
+  }
 
- /**
-  * generate .webloc file contents
-  * @param string $url
-  * @return string
-  */
+  /**
+   * Generate .webloc file contents
+
+   * @param string $url
+   * @return string
+   */
   private function weblocContents(string $url): string
   {
     return <<<XML
@@ -137,7 +142,8 @@ class BookmarkToShortcut
   }
 
   /**
-   * write files
+   * Write the files
+   * 
    * @param string $name
    * @param string $contents
    * @return void
@@ -155,7 +161,7 @@ class BookmarkToShortcut
     );
 
     $bytes = file_put_contents(
-      $this->outDir.DIRECTORY_SEPARATOR."$name.$format",
+      $this->outDir . DIRECTORY_SEPARATOR . "$name.$format",
       $contents
     );
 
@@ -163,7 +169,8 @@ class BookmarkToShortcut
   }
 
   /**
-   * go through each files bookmarks
+   * Go through each files bookmarks
+   * 
    * @return void
    */
   public function convert(): void
@@ -194,5 +201,4 @@ class BookmarkToShortcut
       }
     }
   }
-
 }

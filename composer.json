@@ -1,0 +1,20 @@
+{
+    "name": "devidw/bookmark-to-shortcut",
+    "description": "Convert your browser bookmarks to web shortcut files.",
+    "require": {
+        "php": ">=8.0.0"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Devidw\\BookmarkToShortcut\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "David Wolf",
+            "email": "david@wolf.gdn"
+        }
+    ],
+    "minimum-stability": "beta"
+}
