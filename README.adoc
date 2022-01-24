@@ -19,11 +19,15 @@ First you have to export your bookmarks from your browsers, use the following li
 === Usage
 [source,php]
 ----
-require 'BookmarkToShortcut.php';
+<?php
+
+require_once dirname(__DIR__) . '/src/BookmarkToShortcut.php';
+
+use Devidw\BookmarkToShortcut\BookmarkToShortcut;
 
 $converter = new BookmarkToShortcut(
-  'in', // input directory
-  'out', // output directory
+  __DIR__ . '/in', // source directory
+  __DIR__ . '/out', // destination directory
   ['url', 'webloc', 'desktop'] // formats to write
 );
 
